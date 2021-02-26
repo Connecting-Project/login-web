@@ -1,0 +1,61 @@
+.join_container{
+    width: 550px;
+    margin: 50px auto;
+    padding: 10px 40px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    font-family: 'Jua', sans-serif;
+    letter-spacing: 2px;
+}
+
+.join_inner{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    font-weight: 600;
+}
+
+.join_inner tr{
+    height: 40px;
+}
+
+.join_input{
+    padding: 5px 10px;
+}
+
+.id_check_btn{
+    padding: 4px 10px;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(236, 236, 236);
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: 'Jua', sans-serif;
+}
+
+.id_check_btn:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+.join_btn{
+    width: 100%;
+    padding: 10px 5px;
+    margin-top: 13px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(100, 100, 231);
+    color: white;
+    border: 1px;
+    border-radius: 4px;
+    font-family: 'Jua', sans-serif;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.pw_limit{
+    font-size: 14px;
+}
+
+.email_td{
+    font-size: 14px;
+}

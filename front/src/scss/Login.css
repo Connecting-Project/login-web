@@ -1,0 +1,105 @@
+.login_container{
+    width: 405px;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid #b9b9b9;
+    padding: 10px 40px;
+    font-family: 'Jua', sans-serif;
+}
+
+.login_input{
+    display: block;
+    width: 380px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.login_btn{
+    width: 405px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(163, 0, 0);
+    border: none;
+    border-radius: 2px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sns_btns {
+    margin-bottom: 20px;
+}
+
+.sns_btns > *{
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.google_login{
+    width: 90px;
+    vertical-align: top;
+}
+
+.google_login span{
+    font-weight: bold !important;
+}
+
+.google_login div{
+    padding: 10px 9px !important;
+    margin-right: 0 !important;
+}
+
+.github_btn{
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    box-shadow: rgb(0 0 0 / 24%) 0px 2px 2px 0px, rgb(0 0 0 / 24%) 0px 0px 1px 0px;
+    padding: 0px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    vertical-align: top;
+    height: 43px;
+    background-color: black;
+    
+}
+
+.github_btn img {
+    width: 18px;
+    padding: 10px 9px;
+    margin-right: 0;
+}
+
+.github_btn p {
+    padding: 0 10px 0 0px;
+    font-weight: bold;
+    color: white;
+}
+
+.mvjoin_btn {
+    text-decoration: none;
+}
+
+.link_btns {
+    text-align: right;
+}
+
+.link_btns span:first-child{
+    margin-right: 10px;
+}
+
+.link_btns span{
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
