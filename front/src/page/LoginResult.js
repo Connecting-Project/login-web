@@ -3,9 +3,10 @@ import Login from './Login';
 import sesssionStorageCustom from '../lib/sessionStorageCustom';
 import { GoogleLogout } from 'react-google-login';
 import { useHistory } from 'react-router-dom';
-
+import axios from 'axios';
 import '../scss/LoginResult.css';
 import { GlobalStateContext } from '../App';
+import constants from '../lib/constants';
 
 function LoginResult(){
     const history = useHistory();
@@ -13,12 +14,21 @@ function LoginResult(){
     const { setLoginState } = useContext(GlobalStateContext);
 
     const onLogout = () => {
-        if(user.type === "google"){
-
-        }else if(user.type === "kakao"){
-
-        }else{
-
+        if(user.type === "kakao"){
+            axios({
+                method: 'POST',
+                url: constants.BackUrl+`/login/kakaoLogout?token=${user.token}`,
+            }).then((response)=>{
+                setLoginState(false);
+                sessionStorage.clear();
+                history.push('/');
+            }).catch((error)=>{
+                console.log(error);
+            });
+        }else if(user.type){
+            setLoginState(false);
+            sessionStorage.clear();
+            history.push('/');
         }
     };
 
@@ -35,14 +45,18 @@ function LoginResult(){
             </div>
             <div>
                 <table className="result_table">
+                <colgroup>
+                    <col style={{ width: "50px" }} />
+                    <col style={{ width: "290px" }} />
+                </colgroup>
                     <tbody>
                         <tr>
                             <td>이름</td>
-                            <td>{user.name}</td>
+                            <td className="result_content">{user.name}</td>
                         </tr>
                         <tr>
                             <td>이메일</td>
-                            <td>{user.email}</td>
+                            <td className="result_content">{user.email}</td>
                         </tr>
                     </tbody>
                 </table>

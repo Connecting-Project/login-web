@@ -35,6 +35,7 @@ function KakaoLogin(){
             });
             setLoginState(true);
             console.log(response);
+            history.push(`/loginresult`);
         }).catch((error)=>{
             console.log(error);
         })
@@ -42,7 +43,7 @@ function KakaoLogin(){
 
     
 
-    return(<div>{code}</div>);
+    return(<div></div>);
 }
 
 export default KakaoLogin;

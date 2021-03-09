@@ -3,8 +3,10 @@ import Check from '../assets/check.png'
 import "../scss/Join.css";
 import axios from 'axios';
 import constants from '../lib/constants';
+import { useHistory } from 'react-router-dom';
 
 function Join() {
+    const history = useHistory();
 
     const [state, setState] = useState({
         id: '',
@@ -97,7 +99,9 @@ function Join() {
                     token: "local"
                 }
             }).then((response) => {
+                alert("해당 이메일로 인증번호가 보내졌습니다.\n최초 로그인시 확인하는 작업이며, 해당 인증번호를 입력하여 로그인해주세요.")
                 console.log(response);
+                history.push(`/`);
             }).catch((error) => {
                 console.log(error);
             })

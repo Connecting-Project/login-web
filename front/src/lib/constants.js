@@ -1,4 +1,4 @@
 export default {
-    BackUrl: 'http://10.8.0.10:8080',
+    BackUrl: 'https://login.hawaiian-pizza.gq',
   };
   
