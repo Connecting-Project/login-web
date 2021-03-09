@@ -26,7 +26,6 @@ function Login(){
     }
 
     const resSuccessGoogle = (response) => {
-        console.log(response);
         axios({
             method:'POST',
             url:constants.BackUrl+`/login/google`,
@@ -38,7 +37,6 @@ function Login(){
                 profile_image: response.profileObj.imageUrl,
             }
         }).then((res)=>{
-            console.log(res);
             sessionStorageCustom.setJsonItem('user',{
                 type: 'google',
                 id : response.profileObj.googleId,
@@ -58,20 +56,13 @@ function Login(){
     };
 
     const onLocalLogin = () => {
-        console.log("클릭");
         axios({
             method:'POST',
             url:constants.BackUrl + `/login/localSignin?id=${state.id}&password=${state.pw}`,
         }).then((response)=>{
-            console.log(response.data);
-            console.log(response.data.certified);
 
             if(response.data.certified === "false"){
-                console.log("1");
                 let certifycode = prompt("인증번호를 입력해주세요.","");
-
-                console.log(response);
-                console.log(certifycode);
                 if(response.data.certifycode === certifycode){
                     axios({
                         method: 'POST',
@@ -80,7 +71,6 @@ function Login(){
                         if(res.data === "localCertify fail"){
                             alert("인증번호가 틀렸습니다. 다시한번 확인해주세요.");
                         }else{
-                            console.log("heelo");
                             sessionStorageCustom.setJsonItem('user',{
                                 type: 'local',
                                 id : response.data.id,

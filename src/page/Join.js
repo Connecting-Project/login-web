@@ -100,7 +100,6 @@ function Join() {
                 }
             }).then((response) => {
                 alert("해당 이메일로 인증번호가 보내졌습니다.\n최초 로그인시 확인하는 작업이며, 해당 인증번호를 입력하여 로그인해주세요.")
-                console.log(response);
                 history.push(`/`);
             }).catch((error) => {
                 console.log(error);

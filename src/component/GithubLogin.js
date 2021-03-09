@@ -32,7 +32,6 @@ function GithubLogin(){
                 token : response.data.token,
             });
             setLoginState(true);
-            console.log(response);
             history.push(`/loginresult`);
 
         }).catch((error)=>{
@@ -41,9 +40,9 @@ function GithubLogin(){
     });
 
     return(
-        <>
-            github login
-        </>
+        <div>
+          
+        </div>
     )
 }
 
