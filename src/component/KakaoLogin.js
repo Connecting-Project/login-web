@@ -34,6 +34,7 @@ function KakaoLogin(){
                 token : response.data.token,
             });
             setLoginState(true);
+            console.log(response);
             history.push(`/loginresult`);
         }).catch((error)=>{
             console.log(error);
