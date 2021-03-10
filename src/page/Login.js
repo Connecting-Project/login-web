@@ -52,7 +52,6 @@ function Login(){
     };
 
     const resFailGoogle = (response) => {
-        console.log(response);
     };
 
     const onLocalLogin = () => {
