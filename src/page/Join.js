@@ -5,6 +5,8 @@ import axios from 'axios';
 import constants from '../lib/constants';
 import { useHistory } from 'react-router-dom';
 
+
+
 function Join() {
     const history = useHistory();
 
@@ -18,6 +20,8 @@ function Join() {
         idck: false,
     })
 
+    const [jboolean, setjBoolean] = useState(true);
+
     const onChangeHandler = (e) => {
         const { name, value } = e.target;
 
@@ -27,17 +31,26 @@ function Join() {
                 [name]: value,
                 idck: false,
             });
+        } else if (name === "detail"){
+            if(value === "직접입력"){
+                setjBoolean(false);
+                setState({
+                    ...state,
+                    [name]: '',
+                });
+            }else{
+                setState({
+                    ...state,
+                    [name]: value,
+                });
+            }
+            
         } else {
             setState({
                 ...state,
                 [name]: value,
             });
         }
-
-
-
-
-
     }
 
     const onIdCheckHandler = () => {
@@ -90,7 +103,7 @@ function Join() {
                 method: 'POST',
                 url: constants.BackUrl + `/login/localSignup`,
                 data: {
-                    email: state.email+"@"+state.detail,
+                    email: state.email + "@" + state.detail,
                     id: state.id,
                     logintype: "local",
                     profileimage: "string",
@@ -140,7 +153,25 @@ function Join() {
                     <tr>
                         <td>이메일</td>
                         <td className="email_td"><input type="text" className="join_input" name="email" value={state.email} onChange={onChangeHandler} /> @</td>
-                        <td><input type="text" className="join_input" name="detail" value={state.detail} onChange={onChangeHandler} /></td>
+                {jboolean && <td>
+                    <select name="detail" className="join_selectbox" onChange={onChangeHandler}>
+                        <option value="">도메인 선택</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="lycos.co.kr">lycos.co.kr</option>
+                        <option value="empal.com">empal.com</option>
+                        <option value="cyworld.com">cyworld.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="paran.com">paran.com</option>
+                        <option value="dreamwiz.com">dreamwiz.com</option>
+                        <option value="직접입력">직접입력</option>
+                    </select>
+                </td>}
+                        {!jboolean && <td><input type="text" className="join_input" name="detail" value={state.detail} onChange={onChangeHandler} /></td>}
                     </tr>
                 </tbody>
                 <tfoot>
