@@ -57,7 +57,11 @@ function Login(){
     const onLocalLogin = () => {
         axios({
             method:'POST',
-            url:constants.BackUrl + `/login/localSignin?id=${state.id}&password=${state.pw}`,
+            url:constants.BackUrl + `/login/localSignin`,
+            data:{
+                id: state.id,
+                password: state.pw,
+            }
         }).then((response)=>{
 
             if(response.data.certified === "false"){

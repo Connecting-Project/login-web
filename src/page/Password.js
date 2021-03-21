@@ -13,13 +13,31 @@ function Password(){
         detail: '',
     });
 
+    const [pboolean, setpBoolean] = useState(true);
+
     const onChangeHandler = (e) => {
         const { name, value } = e.target;
 
-        setPwSearch({
-            ...pwSearch,
-            [name]: value,
-        });
+        if (name === "detail"){
+            if(value === "직접입력"){
+                setpBoolean(false);
+                setPwSearch({
+                    ...pwSearch,
+                    [name]: '',
+                });
+            }else{
+                setPwSearch({
+                    ...pwSearch,
+                    [name]: value,
+                });
+            }
+            
+        } else {
+            setPwSearch({
+                ...pwSearch,
+                [name]: value,
+            });
+        }
 
     };
 
@@ -62,7 +80,26 @@ function Password(){
                     <tr>
                         <td>이메일</td>
                         <td className="email_td"><input type="text" className="pws_input" name="email" value={pwSearch.email} onChange={onChangeHandler} /> @</td>
-                        <td><input type="text" className="pws_input" name="detail" value={pwSearch.detail} onChange={onChangeHandler} /></td>
+                        
+                        {pboolean && <td>
+                    <select name="detail" className="pws_selectbox" onChange={onChangeHandler}>
+                        <option value="">도메인 선택</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="lycos.co.kr">lycos.co.kr</option>
+                        <option value="empal.com">empal.com</option>
+                        <option value="cyworld.com">cyworld.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="paran.com">paran.com</option>
+                        <option value="dreamwiz.com">dreamwiz.com</option>
+                        <option value="직접입력">직접입력</option>
+                    </select>
+                </td>}
+                        {!pboolean && <td><input type="text" className="pws_input" name="detail" value={pwSearch.detail} onChange={onChangeHandler} /></td>}
                     </tr>
                 </tbody>
                 <tfoot>
