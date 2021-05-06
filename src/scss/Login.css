@@ -57,7 +57,6 @@
 }
 
 .github_btn{
-    background-color: rgb(255, 255, 255);
     display: inline-flex;
     align-items: center;
     color: rgba(0, 0, 0, 0.54);
@@ -71,7 +70,6 @@
     vertical-align: top;
     height: 43px;
     background-color: black;
-    
 }
 
 .github_btn img {

@@ -134,7 +134,7 @@ function Login(){
             <hr/>
             <h4>SNS 계정으로 로그인</h4>
             <div className="sns_btns">
-                <a href="https://kauth.kakao.com/oauth/authorize?client_id=8d49647c4738cb1c7919b1734a1e2121&redirect_uri=https://login.hawaiian-pizza.ml/kakao_login&response_type=code">
+                <a href="https://kauth.kakao.com/oauth/authorize?client_id=8d49647c4738cb1c7919b1734a1e2121&redirect_uri=https://login.hawaiian-pizza.space/kakao_login&response_type=code">
 
                     <img src={Kakao} alt="kakao_btn"/>
                 </a>
@@ -146,7 +146,7 @@ function Login(){
                     cookiePolicy={'single_host_origin'}
                     className="google_login"
                 />
-                <a href="https://github.com/login/oauth/authorize?client_id=fd299d60e9868bcaf31f&redirect_uri=https://login.hawaiian-pizza.ml/github_login&scope=repo,user">
+                <a href="https://github.com/login/oauth/authorize?client_id=fd299d60e9868bcaf31f&redirect_uri=https://login.hawaiian-pizza.space/github_login&scope=repo,user">
                     <div className="github_btn">
                         <img src={GithubLogo} alt="githublogo" className="githublogo" align="center"/>
                         <p>로그인</p>
