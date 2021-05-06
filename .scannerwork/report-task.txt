@@ -1,6 +1,0 @@
-projectKey=hawaiian-login-web
-serverUrl=https://sonar.wisoft.io
-serverVersion=8.4.2.36762
-dashboardUrl=https://sonar.wisoft.io/dashboard?id=hawaiian-login-web
-ceTaskId=AXhE7OGpi_hpE3YpMov-
-ceTaskUrl=https://sonar.wisoft.io/api/ce/task?id=AXhE7OGpi_hpE3YpMov-

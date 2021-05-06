@@ -1,4 +1,4 @@
 export default {
-    BackUrl: 'https://login.hawaiian-pizza.gq',
+    BackUrl: 'https://login.hawaiian-pizza.pw',
   };
   
