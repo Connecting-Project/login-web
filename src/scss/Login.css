@@ -38,7 +38,7 @@
 }
 
 .sns_btns > *{
-    margin: 0 10px;
+    margin: 0 5px;
     text-decoration: none;
 }
 
@@ -100,4 +100,26 @@
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.naverlogo{
+    display: inline-flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    box-shadow: rgb(0 0 0 / 24%) 0px 2px 2px 0px, rgb(0 0 0 / 24%) 0px 0px 1px 0px;
+    padding: 0px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    vertical-align: top;
+    height: 43px;
+    width: 89px;
+    cursor: pointer;
+}
+
+.naver_img{
+    width: 18px;
+    padding: 10px 9px;
 }
