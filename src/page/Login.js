@@ -168,7 +168,7 @@ function Login() {
                 </a>
                 <NaverLogin
                     clientId="fDJWIkT7trJlUmIlmkDY"
-                    callbackUrl="http://localhost:3000/"
+                    callbackUrl="https://login.hawaiian-pizza.space/"
                     render={(props) => <div onClick={props.onClick} className="naverlogo"><img src={Naver} alt="naver_logo" className="naver_img"/> 로그인</div>}
                     onSuccess={(naveruser)=>{onNaverLoginHandler(naveruser)}}
                     onFailure={() => console.error("실패")}
